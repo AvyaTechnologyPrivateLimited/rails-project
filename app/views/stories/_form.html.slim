@@ -1,0 +1,13 @@
+= simple_form_for(@story) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :heading
+    = f.input :body_text
+    = f.input :date_of_submission
+    = f.input :source
+    = f.collection_select :genre_id, Genre.all, :id, :name , prompt: true
+    = f.input :user_id
+
+  .form-actions
+    = f.button :submit

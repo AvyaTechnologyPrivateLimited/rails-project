@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Id:
+  = @story.id
+p
+  strong Heading:
+  = @story.heading
+p
+  strong Body Text:
+  = @story.body_text
+p
+  strong Date of Submission:
+  = @story.date_of_submission
+p
+  strong Source:
+  = @story.source
+p
+  strong Genre:
+  = @story.genre_id
+p
+  strong User:
+  = @story.user_id
+
+= link_to 'Edit', edit_story_path(@story)
+'|
+= link_to 'Back', stories_path

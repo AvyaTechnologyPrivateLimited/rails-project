@@ -1,0 +1,14 @@
+= form_tag :action=> 'authenticate'
+table
+  tbody
+	tr
+		td User name:
+		td = text_field("user", "firstname",:size=>"15" ,:required=>true ) 
+
+	tr
+		td Password:
+		td = password_field("user","password",:size=>"17" ,:required=>true)
+
+	tr
+		td
+		td = submit_tag "Login"
